@@ -1,0 +1,29 @@
+{
+  "name": "sass-november-2018",
+  "version": "1.0.0",
+  "description": "Sass fundamentals",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-laws/sass-november-2018.git"
+  },
+  "keywords": [
+    "Sass"
+  ],
+  "author": "Robert Laws",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robert-laws/sass-november-2018/issues"
+  },
+  "homepage": "https://github.com/robert-laws/sass-november-2018#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
