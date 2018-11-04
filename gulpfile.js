@@ -10,7 +10,7 @@ var paths = {
     dest: "build/styles"
   },
   html: {
-    src: "src/**/*.html",
+    src: "src/html/**/*.html",
     dest: "build"
   },
   images: {
@@ -56,6 +56,7 @@ gulp.task("watch", function() {
   });
   gulp.watch(paths.styles.src, ["sass"]);
   gulp.watch(paths.html.src, ["html"])
+  gulp.watch(paths.images.src, ["images"])
 });
 
 gulp.task("default", ["sass", "html", "images", "watch"]);
