@@ -3,3 +3,8 @@
   float: $float-position;
   margin: 10px;
 }
+
+@mixin heading-size($ratio) {
+  font-size: $ratio * 1rem;
+  padding: $ratio * 10px 0;
+}

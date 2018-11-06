@@ -1,0 +1,93 @@
+// use pseudoclasses to trigger animations
+main#animate {
+  h1 {
+    color: darken($primary-color, 12);
+
+    &:hover {
+      background-color: lighten($sky-blue-1, 10);
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+
+  section#basic-button {
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 5px;
+      color: $honeydew-1;
+      display: block;
+
+      font: {
+        size: 1.2rem;
+        family: sans-serif;
+        weight: 500;
+      }
+
+      &:hover {
+        color: lighten($light-salmon-4, 42);
+      }
+
+      &:active {
+        color: lighten(#FA23AA, 25);
+      }
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input {
+      display: inline-block;
+      padding: 4px 6px;
+      margin: 10px 0;
+      font-size: 1.2rem;
+
+      &:focus {
+        background-color: transparentize($primary-color, 0.5);
+      }
+    }
+  }
+
+  section#animated-button {
+    h2 {
+      text-align: center;
+      font-weight: 300;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      display: block;
+      position: relative;
+      color: #FFF;
+      background-color: $steel-blue-4;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 25px 80px;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0 6px darken($steel-blue-4, 10);
+
+      font: {
+        size: 16px;
+        weight: 300;
+      }
+
+      &:hover {
+        box-shadow: 0 3px darken($steel-blue-4, 10);
+        top: 3px;
+      }
+
+      &:active {
+        box-shadow: 0 0 darken($steel-blue-4, 10);
+        top: 6px;
+      }
+    }
+  }
+}
