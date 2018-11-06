@@ -1,8 +1,9 @@
-// modules
-@import "config/color";
-@import "config/typography";
-@import "config/base";
+// mixins
+@import "modules/mixins";
+@import "modules/variables";
 
 // partials
-@import "helpers/snippets";
+@import "partials/helpers";
+@import "partials/styles";
+@import "partials/header";
 

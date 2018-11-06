@@ -1,0 +1,38 @@
+header[role='navigation'] {
+  margin: 20px 0 30px 0;
+  border-bottom: 1px solid $secondary-color;
+
+  #logo {
+    float: left;
+    margin: 0 20px 0 0;
+
+    img {
+      display: block;
+      opacity: 0.95;
+    }
+  }
+}
+
+// navigation styles - comment won't show in compiled CSS
+/* navigation styles - comment will show in compiled CSS */
+nav {
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px;
+
+    &.active {
+      color: darken($primary-color, 20%);
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  header & {
+    padding: 20px;
+    border: 1px solid $background-color;
+  }
+}
