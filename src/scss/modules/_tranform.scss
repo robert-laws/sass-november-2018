@@ -1,0 +1,33 @@
+main#transform {
+  div {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: $slate-grey-4;
+    color: $honeydew-1;
+
+    &.first {
+      transform: translateX(20px);
+      transform-origin: left bottom;
+      transform: rotate(-35deg) scale(1.1);
+    }
+
+    &.second {
+      transform: translateX(40px);
+
+      &:hover {
+        transform: scale(3);
+        transform-origin: left top;
+      }
+    }
+
+    &.third {
+      transform: translate(50px, 100px);
+
+      &:hover {
+        transform-origin: 0 0;
+        transform: scale(2);
+      }
+    }
+  }
+};
