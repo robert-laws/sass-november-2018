@@ -7,6 +7,20 @@ main#transitions {
   div.transition-1 {
     width: 100px;
     height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 10px;
+    color: #FFF;
     background-color: $light-salmon-4;
+
+    &:hover {
+      transform-origin: 0 0;
+      background-color: $sky-blue-1;
+      transform: scale(3);
+      border-radius: 70px;
+      transition-duration: 2s;
+      transition-property: background-color, border-radius, transform;
+    }
   }
 }
