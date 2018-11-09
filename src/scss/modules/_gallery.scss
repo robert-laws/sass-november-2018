@@ -31,7 +31,7 @@ div.item {
     width: 0;
     height: 2px;
     background: $primary-color;
-    transition: width .6s ease-out;
+    transition: width .6s ease-out 0.1s;
   }
 
   &:hover::after {
