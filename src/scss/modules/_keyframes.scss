@@ -1,0 +1,113 @@
+#keyframes {
+  padding: 10px;
+
+  div.keyframe-animation.blue {
+    @include animation-box(#FFF, $primary-color, 200px, 100px);
+    animation-name: rainbowBox;
+    animation-duration: 10s;
+    animation-timing-function: ease-out;
+    animation-delay: 10ms;
+    animation-iteration-count: infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  div.keyframe-animation.green {
+    @include animation-box(#FFF, green, 200px, 100px);
+    border-radius: 10px;
+    font-weight: bold;
+
+    &:hover {
+      animation-name: movement;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+    }
+    
+  }
+
+  div.keyframe-animation.red {
+    @include animation-box(#FFF, #F00, 200px, 100px);
+    animation-name: slide;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  }
+
+  div.keyframe-animation.yellow {
+    @include animation-box(#000, #FF0, 200px, 100px);
+    animation-name: colorChange;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  hr {
+    margin: 12px 0;
+  }
+}
+
+@keyframes colorChange {
+  50% {
+    background-color: $light-salmon-4;
+  }
+  100% {
+    background-color: $steel-blue-4;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0)
+  }
+  25% {
+    transform: translateX(200px)
+  }
+  50% {
+    transform: translateX(250px)
+  }
+  75% {
+    transform: translateX(225px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@keyframes movement {
+  45%, 65% {
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    transform: scale(1.1, 0.9)
+  }
+  56% {
+    transform: scale(0.9, 1.1) translate(0, -5px)
+  }
+  59% {
+    transform: scale(1.0, 1.0) translate(0, -3px)
+  }
+}
+
+@keyframes rainbowBox {
+  0% {
+    background-color: $primary-color;
+  }
+  25% {
+    background-color: $secondary-color;
+  }
+  50% {
+    background-color: green;
+    transform: translateX(100px);
+  }
+  75% {
+    background-color: $lemon-chiffron-4;
+  }
+  100% {
+    background-color: $primary-color;
+  }
+}
