@@ -1,3 +1,11 @@
+/* Recommended transitions
+transform: translate();
+transform: scale();
+transform: rotate();
+opacity
+*/
+
+
 main#transitions {
 
   hr {
@@ -5,14 +13,7 @@ main#transitions {
   }
 
   div.transition-1 {
-    width: 100px;
-    height: 100px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 10px;
-    color: #FFF;
-    background-color: $light-salmon-4;
+    @include animation-box(#FFF, $light-salmon-4);
 
     &:hover {
       transform-origin: 0 0;
@@ -27,20 +28,58 @@ main#transitions {
   }
 
   .transition-2 {
-    width: 100px;
-    height: 100px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    color: $honeydew-1;
-    background-color: $lemon-chiffron-4;
+    @include animation-box($honeydew-1, $lemon-chiffron-4);
+    transition: 4s;
 
     &:hover {
       transform: translateX(300px);
       transition-property: transform;
-      transition-duration: 4s;
+      transition-duration: 2s;
       transition-delay: 0.2ms;
-      transition-timing-function: ease-in-out;
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }    
+  }
+
+  .transition-3 {
+    @include animation-box(lighten($sky-blue-1, 20), $steel-blue-4);
+    transition: 2s;
+
+    &:hover {
+      transform: translateX(500px);
+      // transition: transition-property transition-duration transition-timing-function transition-delay;
+      transition: transform 4s ease-out 0.2ms;
+    }
+  }
+
+  .transition-4 {
+    @include animation-box(#FFF, $slate-grey-4);
+    // transition-property: background-color;
+    // transition-duration: 2s;
+    // transition-delay: 2ms;
+    // transition-timing-function: ease-in;
+
+    transition: 
+      background-color 1s ease-in 2ms, 
+      border-radius 2s ease-in 4ms,
+      transform 1s ease-out,
+      opacity 1.5s linear 1s;
+
+    &:hover {
+      background-color: #F00;
+      border-radius: 10px;
+      transform: scale(1.25);
+      opacity: 0.15;
+    }
+  }
+
+  .transition-5 {
+    @include animation-box(#fff, $primary-color, 200px, 2px);
+    transform-origin: 0 0;
+    transition: transform 2s ease-out;
+    
+    &:hover {
+      transform-origin: 0 0;
+      transform: scaleX(0.1);
+    }
   }
 }
