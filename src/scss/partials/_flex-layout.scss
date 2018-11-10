@@ -1,0 +1,69 @@
+#flex-layout {
+  .container.header {
+    border: 5px solid $text-color;
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    justify-content: center;
+
+    .box {
+      @include animation-box(#FFF, $slate-grey-4, 150px, 200px);
+      border: 5px solid darken($honeydew-1, 10%);
+      font-size: 2em;
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#sidebar {
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $slate-grey-4;
+  color: lighten($text-color, 60%);
+}
+
+#sidebar-start {
+  div {
+    padding: 10px;
+  }
+
+  .box {
+    @include animation-box(#FFF, $primary-color, 50px, 100px);
+    border: 5px solid $lemon-chiffron-4;
+  }
+}
+
+#sidebar-end {
+  div {
+    padding: 10px;
+  }
+
+  .box {
+    @include animation-box(#FFF, $primary-color, 50px, 100px);
+    border: 5px solid $lemon-chiffron-4;
+  }
+}
+
+// .box-1 {
+//   flex: 2;
+// }
+// .box-2 {
+//   flex: 1;
+// }
+// .box-3 {
+//   flex: 1;
+// }
+// .box-4 {
+//   flex: 1;
+// }
+// .box-5 {
+//   flex: 1;
+// }
+// .box-6 {
+//   flex: 1;
+// }
