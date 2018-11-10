@@ -1,0 +1,58 @@
+#loading-icon {
+  width: 100%;
+  
+  div.loader-container {
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  #title {
+    width: 200px;
+    margin: 24px auto;
+    font-size: 2em;
+
+    opacity: 0;
+    animation: appear 1s 2s forwards;
+  }
+
+  div.loader {
+    @include animation-box(#FFF, #FFF, 120px, 120px);
+    border: 16px solid $lemon-chiffron-4;
+    border-top-color: $primary-color;
+    border-bottom-color: lighten($light-salmon-4, 33%);
+    border-radius: 50%;
+
+    animation: color-spin 4s linear infinite;
+  }
+}
+
+
+@keyframes color-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    border-top-color: $secondary-color;
+    border-bottom-color: $sky-blue-1;
+  }
+  50% {
+    border-top-color: $primary-color;
+    border-bottom-color: $steel-blue-4;
+  }
+  75% {
+    border-top-color: green;
+    border-bottom-color: yellowgreen;
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
