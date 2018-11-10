@@ -44,6 +44,28 @@
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    transition: all 4s ease-out;
+
+    &:hover {
+      transform: translateX(200px);
+      width: 400px;
+      font-size: 2em;
+    }
+  }
+
+  div.keyframe-animation.blue-2 {
+    @include animation-box(#FFF, $primary-color, 200px, 100px);
+    animation: move-blue 5s linear 1s infinite normal none;
+
+    &:hover {
+      animation: move-blue 5s linear 1s infinite normal none;
+    }
+  }
+
+  div.keyframe-animation.grey {
+    @include animation-box(#FFF, $lemon-chiffron-4, 200px, 100px);
+    animation: moving-box 5s ease-in-out 0.2s infinite;
   }
 
   hr {
@@ -109,5 +131,32 @@
   }
   100% {
     background-color: $primary-color;
+  }
+}
+
+@keyframes move-blue {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(150px, -10px);
+  }
+  50% {
+    transform: translate(300px, 0px);
+  }
+  75% {
+    transform: translate(450px, 10px);
+  }
+  100% {
+    transform: translate(600px, 0px);
+  }
+}
+
+@keyframes moving-box {
+  50% {
+    transform: translateX(1600px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
