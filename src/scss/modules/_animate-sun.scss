@@ -1,0 +1,83 @@
+#animate-sun {
+  & > div {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+
+  div#landscape {
+    background-color: #2C3E50;
+    animation-name: sky;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  div#sun {
+    background: #F1C40F;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+
+    animation-name: move-sun;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  div#land {
+    background: green;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+}
+
+
+@keyframes sky {
+  0% {
+    background-color: #2C3E50;
+  }
+  10% {
+    background-color: lighten($light-salmon-4, 40%);
+  }
+  30% {
+    background-color: $primary-color;
+  }
+  70% {
+    background-color: $primary-color;
+  }
+  90% {
+    background-color: lighten($light-salmon-4, 40%);
+  }
+  100% {
+    background-color: #2C3E50;
+  }
+}
+
+@keyframes move-sun {
+  0% {
+    transform: translate(0px, 50px);
+    background-color: #F1C40F;
+  }
+  10% {
+    transform: translate(100px, 0px);
+    background-color: lighten(#F1C40F, 5%);
+  }
+  30% {
+    transform: translate(300px, -50px);
+    background-color: lighten(#F1C40F, 20%);
+  }
+  70% {
+    transform: translate(700px, -50px);
+    background-color: lighten(#F1C40F, 20%);
+  }
+  90% {
+    transform: translate(900px, 0px);
+    background-color: lighten(#F1C40F, 5%);
+  }
+  100% {
+    transform: translate(1000px, 50px);
+    background-color: darken(#F1C40F, 20%);
+  }
+}
