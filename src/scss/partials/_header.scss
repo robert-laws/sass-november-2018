@@ -15,7 +15,7 @@ header[role='navigation'] {
 
 // navigation styles - comment won't show in compiled CSS
 /* navigation styles - comment will show in compiled CSS */
-nav {
+nav#temp-nav {
   a {
     color: $primary-color;
     text-decoration: none;

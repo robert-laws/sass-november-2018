@@ -1,0 +1,38 @@
+nav#main-nav {
+  border: 1px dashed #F5A;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  a {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin: 20px;
+    text-decoration: none;
+    color: $primary-color;
+    border-bottom: 1px solid #52C9AA;
+    transition: color 0.5s ease-out;
+
+    &:hover {
+      color: $light-salmon-4;
+      border-bottom: 1px solid darken($primary-color, 10%);
+    }
+  }
+}
+
+// @media screen and (max-width: 920px) {
+//     nav#main-nav {
+//         justify-content: space-around;
+//     }
+// }
+
+$map: (
+  flex-direction: column,
+  align-items: center
+);
+
+@include breakpoint("nav#main-nav", 900px, "justify-content", "center");
+
+// @include breakpoint("nav#main-nav", 600px, "flex-direction", "column");
+
+@include multi-breakpoints("nav#main-nav", 600px, $map);

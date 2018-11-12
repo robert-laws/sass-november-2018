@@ -18,3 +18,27 @@
   vertical-align: middle;
   text-align: center;
 }
+
+@mixin breakpoint($element, $maxWidth, $property, $value) {
+  @media screen and (max-width: #{$maxWidth}) {
+    #{$element} {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+@mixin breakpoint-nested($maxWidth, $property, $value) {
+  @media only screen and (max-width: #{$maxWidth}) {
+    #{$property}: #{$value};
+  }
+}
+
+@mixin multi-breakpoints($element, $maxWidth, $propList) {
+  @media screen and (max-width: #{$maxWidth}) {
+    #{$element} {
+      @each $prop, $val in $propList {
+        #{$prop}: #{$val};
+      }
+    }
+  }
+}

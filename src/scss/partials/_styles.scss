@@ -8,6 +8,8 @@ body {
   background: lighten($background-color, 25%);
   color: $text-color;
 
+  @include breakpoint-nested(900px, "background", $light-salmon-4);
+
   font: {
     family: Helvetica, sans-serif;
     weight: normal;
